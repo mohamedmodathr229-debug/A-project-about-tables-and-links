@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Tables</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            font-family: "Segoe UI", Tahoma, Arial;
+            background: linear-gradient(135deg, #000000, #0f2027, #203a43);
+            color: #ffffff;
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(90deg, #ff9800, #ff5722);
+            color: #000;
+            box-shadow: 0 0 30px rgba(255,152,0,0.7);
+        }
+        .hero h1 { font-size: 50px; margin-bottom: 10px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        .hero p { font-size: 22px; font-weight: bold; }
+
+        .content {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 40px;
+            background: rgba(0,0,0,0.7);
+            border-radius: 25px;
+            box-shadow: 0 0 40px rgba(0,255,255,0.3);
+        }
+        .content h2 { font-size: 36px; color: #00e5ff; margin-bottom: 20px; text-shadow: 0 0 12px #00e5ff; }
+        .content p { font-size: 22px; line-height: 2; margin-bottom: 25px; }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 40px; font-size: 20px; }
+        th {
+            background: linear-gradient(90deg, #00e5ff, #1de9b6);
+            color: #000;
+            padding: 15px;
+            text-transform: uppercase;
+        }
+        td { padding: 15px; text-align: center; background-color: rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.2); }
+        tr:hover td { background-color: rgba(0,229,255,0.2); transition: 0.3s; }
+
+        .nav-btns { text-align: center; margin-top: 30px; }
+        .nav-btns a {
+            display: inline-block;
+            margin: 0 15px;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 15px;
+            background: #00e5ff;
+            color: #000;
+        }
+        .nav-btns a:hover { background: gold; }
+        footer { text-align: center; padding: 25px; font-size: 18px; background: #000; color: #aaa; margin-top: 60px; }
+        footer span { color: #ff9800; }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>HTML Tables</h1>
+        <p>Organizing Data in a Powerful and Professional Way</p>
+    </div>
+
+    <div class="content">
+        <h2>What are Tables in HTML?</h2>
+        <p>
+            تُستخدم <strong>الجداول في HTML</strong> لعرض البيانات
+            بطريقة منظمة على شكل صفوف وأعمدة، مما يسهل قراءة
+            المعلومات وتحليلها.
+        </p>
+
+        <p>
+            يتم إنشاء الجداول باستخدام الوسم
+            <strong>&lt;table&gt;</strong>، بينما يُستخدم الوسم
+            <strong>&lt;tr&gt;</strong> لإنشاء الصفوف،
+            و<strong>&lt;th&gt;</strong> لعناوين الأعمدة،
+            و<strong>&lt;td&gt;</strong> لبيانات الجدول.
+        </p>
+
+        <h2>Example Table</h2>
+        <table>
+            <tr><th>Course</th><th>Instructor</th><th>Level</th><th>Status</th></tr>
+            <tr><td>HTML</td><td>Dr. Ahmed</td><td>Beginner</td><td>Active</td></tr>
+            <tr><td>CSS</td><td>Dr. Sara</td><td>Intermediate</td><td>Active</td></tr>
+            <tr><td>JavaScript</td><td>Dr. Omar</td><td>Advanced</td><td>Upcoming</td></tr>
+        </table>
+
+        <div class="nav-btns">
+            <a href="index.html">← الصفحة السابقة</a>
+            <a href="links.html">الصفحة التالية →</a>
+        </div>
+    </div>
+
+    <footer>
+        Designed by <span>Mohamed Modathr Ahmed</span> | Computer Science – Level Two
+    </footer>
+
+</body>
+</html>

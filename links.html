@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Links</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            font-family: "Segoe UI", Tahoma, Arial;
+            background: linear-gradient(120deg, #000428, #004e92);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        @keyframes glow { 0%{text-shadow:0 0 5px #00e5ff;} 50%{text-shadow:0 0 20px #ff00ff;} 100%{text-shadow:0 0 5px #00e5ff;} }
+
+        .neon-header { text-align:center; padding:70px 20px; background: radial-gradient(circle,#000,#020024); box-shadow: inset 0 0 50px rgba(0,255,255,0.3);}
+        .neon-header h1 { font-size: 55px; animation: glow 2s infinite alternate; }
+        .neon-header p { font-size: 24px; color:#00e5ff; letter-spacing: 2px; }
+
+        .card {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 50px;
+            background: rgba(0,0,0,0.75);
+            border-radius: 30px;
+            box-shadow: 0 0 60px rgba(255,0,255,0.4);
+            position: relative;
+        }
+        .card::before {
+            content:"";
+            position:absolute; top:-3px; left:-3px; right:-3px; bottom:-3px;
+            border-radius:30px;
+            background: linear-gradient(90deg,#00e5ff,#ff00ff,#00e5ff);
+            z-index:-1;
+        }
+        .card h2 { font-size:38px; color:#ff00ff; margin-bottom:20px; }
+        .card p { font-size:22px; line-height:2; margin-bottom:30px; }
+
+        .links-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+            gap: 25px;
+        }
+        a {
+            display:block; text-decoration:none; font-size:22px;
+            padding:20px; text-align:center; color:#000;
+            background: linear-gradient(135deg,#00e5ff,#1de9b6);
+            border-radius:18px; font-weight:bold;
+            box-shadow:0 0 25px rgba(0,229,255,0.8);
+            transition:0.4s;
+        }
+        a:hover {
+            transform: scale(1.1) rotate(-2deg);
+            background: linear-gradient(135deg,#ff00ff,#ff4081);
+            box-shadow:0 0 45px rgba(255,0,255,1);
+            color:#fff;
+        }
+
+        footer { text-align:center; padding:30px; font-size:18px; background:#000; color:#bbb; margin-top:80px; }
+        footer span { color:#00e5ff; }
+    </style>
+</head>
+<body>
+
+    <div class="neon-header">
+        <h1>HTML Links</h1>
+        <p>Navigation Beyond Limits</p>
+    </div>
+
+    <div class="card">
+        <h2>What are Links in HTML?</h2>
+        <p>
+            تُعتبر <strong>الروابط في HTML</strong> العنصر الأساسي
+            للتنقل بين صفحات الويب والمواقع المختلفة.
+        </p>
+        <div class="links-box">
+            <a href="index.html">Go to Introduction</a>
+            <a href="tables.html">View Tables Page</a>
+            <a href="https://www.w3schools.com" target="_blank">W3Schools</a>
+            <a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a>
+        </div>
+        <div class="nav-btns" style="margin-top:40px; text-align:center;">
+            <a href="tables.html">← الصفحة السابقة</a>
+        </div>
+    </div>
+
+    <footer>
+        Designed by <span>Mohamed Modathr Ahmed</span> | Computer Science – Level Two
+    </footer>
+
+</body>
+</html>

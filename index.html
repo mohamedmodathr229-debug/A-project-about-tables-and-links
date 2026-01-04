@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>صفحة البداية</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    background: radial-gradient(circle at top, #000022, #000033);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* شاشة البداية */
+#intro-screen {
+    text-align: center;
+    background: radial-gradient(circle at center, #000011, #000044, #000066);
+    padding: 60px 50px 50px 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px #0044ff, 0 0 100px #3366ff inset;
+    animation: pulseBg 6s infinite alternate;
+}
+
+/* حركة الخلفية */
+@keyframes pulseBg {
+    0% { background: radial-gradient(circle at center, #000011, #000044, #000066); }
+    50% { background: radial-gradient(circle at center, #000022, #000055, #000088); }
+    100% { background: radial-gradient(circle at center, #000011, #000044, #000066); }
+}
+
+/* الدائرة الخلفية للصورة */
+#image-circle {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0066ff, #33ccff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 50px #0099ff, 0 0 100px #33ccff inset;
+}
+
+#image-circle img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+#intro-screen h1 {
+    font-size: 3.5em;
+    color: #00ccff;
+    margin: 0;
+    text-shadow: 0 0 10px #00ccff, 0 0 20px #33ccff, 0 0 40px #0066ff;
+    animation: glowText 2s infinite alternate;
+}
+
+#intro-screen h2 {
+    font-size: 2em;
+    color: #66ccff;
+    margin: 15px 0 0 0;
+    text-shadow: 0 0 10px #66ccff, 0 0 25px #99ddff, 0 0 40px #33bbff;
+}
+
+@keyframes glowText {
+    0% { text-shadow: 0 0 10px #00ccff, 0 0 20px #33ccff; }
+    50% { text-shadow: 0 0 25px #00ccff, 0 0 50px #33ccff, 0 0 80px #0066ff; }
+    100% { text-shadow: 0 0 10px #00ccff, 0 0 20px #33ccff; }
+}
+
+#intro-screen button {
+    margin-top: 35px;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    background: linear-gradient(45deg, #0066ff, #3399ff, #00ccff);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 25px #0099ff, 0 0 50px #33ccff inset;
+    transition: 0.3s;
+}
+
+#intro-screen button:hover {
+    background: linear-gradient(45deg, #3399ff, #66ccff, #00aaff);
+    box-shadow: 0 0 30px #33ccff, 0 0 60px #66ccff inset;
+}
+</style>
+</head>
+<body>
+
+<div id="intro-screen">
+    <div id="image-circle">
+        <img src="me.png" alt="صورتي">
+    </div>
+    <h1>Computer Science</h1>
+    <h2>Scientist Mohamed-Modathr</h2>
+    <button onclick="startProject()">ابدأ المشروع</button>
+</div>
+
+<script>
+function startProject() {
+    window.location.href = "intro.html";
+}
+</script>
+
+</body>
+</html>
